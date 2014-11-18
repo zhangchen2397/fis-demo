@@ -6,7 +6,8 @@
             "msg"=>"success"
         ),
         "data"=>array(
-            "chapterId"=>$id
+            "cid"=>$id,
+            "title"=>"获取列表成功"
         )
     );
     echo json_encode($result);

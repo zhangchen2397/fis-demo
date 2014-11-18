@@ -5,6 +5,7 @@
     }, 
 
     "data": {
-        "tips": "tips from ajax request"
+        "cid": 100,
+        "title": "获取列表成功"
     }
 }

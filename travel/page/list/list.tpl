@@ -6,6 +6,8 @@
 
 {%widget name="travel:widget/news/news.tpl"%}
 
+<p><button id="ajax-btn">模拟接口调用</button></p>
+
 {%script%}
     require( './list.js' );
 {%/script%}
