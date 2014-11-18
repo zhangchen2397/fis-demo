@@ -1,0 +1,10 @@
+{
+    "status":{
+        "code": 0,
+        "msg": "success"
+    }, 
+
+    "data": {
+        "tips": "tips from ajax request"
+    }
+}

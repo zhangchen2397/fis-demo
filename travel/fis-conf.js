@@ -1,4 +1,4 @@
-fis.config.merge({
+fis.config.merge( {
     namespace: 'travel',
     modules: {
         spriter: 'csssprites'
@@ -21,11 +21,20 @@ fis.config.merge({
             }
         }
     }
-});
+} );
 
-fis.config.get('roadmap.path').unshift( {
-    reg : /^\/widget\/(.*\.(js|css))$/i,
+fis.config.get( 'roadmap.path' ).unshift( {
+    reg : /^\/widget\/(.*\.js)$/i,
+    isMod : true,
+    release : '/static/${namespace}/widget/$1'
+}, {
+    reg : /^\/static\/(.*\.js)$/i,
     isMod : true,
     useSprite: true,
-    release : '/static/${namespace}/widget/$1'
-});
+    release : '/static/${namespace}/mod/$1'
+}, {
+    reg : /^\/page\/(.*\.js)$/i,
+    isMod : true,
+    useSprite: true,
+    release : '/static/${namespace}/page/$1'
+} );
