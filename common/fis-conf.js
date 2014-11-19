@@ -1,8 +1,5 @@
 fis.config.merge( {
     namespace: 'common',
-    pack : {
-        '/static/common/pkg.js' : [/ui\/pkg_\d+\.js/i]
-    },
     deploy: {
         test: {
             receiver: "http://samczhang.kf0309.3g.qq.com/zhangchen/receiver.php",

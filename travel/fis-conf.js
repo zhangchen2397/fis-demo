@@ -1,8 +1,10 @@
 fis.config.merge( {
     namespace: 'travel',
+
     modules: {
         spriter: 'csssprites'
     },
+
     pack: {
         '/static/travel/test.js': [
             /a_require\.js/,
@@ -10,15 +12,23 @@ fis.config.merge( {
             /renderBox.js/
         ],
     },
+
     settings: {
         smarty: {
             left_delimiter: '{%',
             right_delimiter: '%}',
         },
+
         spriter: {
             csssprites: {
                 margin: 30
             }
+        }
+    },
+
+    roadmap: {
+        ext: {
+            less: 'css'
         }
     }
 } );
@@ -30,11 +40,12 @@ fis.config.get( 'roadmap.path' ).unshift( {
 }, {
     reg : /^\/static\/(.*\.js)$/i,
     isMod : true,
-    useSprite: true,
     release : '/static/${namespace}/mod/$1'
 }, {
     reg : /^\/page\/(.*\.js)$/i,
     isMod : true,
-    useSprite: true,
     release : '/static/${namespace}/page/$1'
+}, {
+    reg: '**.css',
+    useSprite: true
 } );
