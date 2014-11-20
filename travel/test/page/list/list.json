@@ -1,0 +1,13 @@
+{
+    "title": "列表页",
+    "menu": [
+        {
+            "href": "/travel/page/index/index",
+            "name": "首页"
+        },
+        {
+            "href": "/travel/page/list/list",
+            "name": "列表页"
+        }
+    ]
+}

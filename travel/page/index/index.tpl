@@ -8,17 +8,23 @@
 
 {%widget name="travel:widget/news/news.tpl"%}
 
-<p><button id="call-commod-btn">调用common模块</button></p>
+{%widget name="travel:widget/icon/icon.tpl"%}
 
-<div class="icon-list">
-    <span class="icon icon1"></span>
-    <span class="icon icon2"></span>
-    <span class="icon icon3"></span>
-    <span class="icon icon4"></span>
-</div>
+<p>
+    <button id="call-commod-btn">调用common模块</button>
+    <button id="call-curmod-btn">调用当前模块</button>
+</p>
 
 {%script%}
     require( './index.js' );
+
+    /**
+    require.async( [
+        'common:static/mod/slide/slide.js'
+    ], function( slide ) {
+        slide.init();
+    } );
+    */
 {%/script%}
 
 {%/block%}

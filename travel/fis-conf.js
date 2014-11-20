@@ -6,11 +6,15 @@ fis.config.merge( {
     },
 
     pack: {
-        '/static/travel/test.js': [
-            /a_require\.js/,
-            /a_require_aysnc\.js/,
-            /renderBox.js/
+        '/static/pkg/travel.css': [
+            /^\/widget\/.*\.(css|less)/i,
+            /^\/static\/.*\.(css|less)/i,
         ],
+
+        '/static/pkg/travel.js': [
+            /^\/static\/(lib|mod)\/.*\.js/i,
+            /^\/widget\/.*\.js/i
+        ]
     },
 
     settings: {
@@ -24,28 +28,25 @@ fis.config.merge( {
                 margin: 30
             }
         }
-    },
-
-    roadmap: {
-        ext: {
-            less: 'css'
-        }
     }
 } );
 
-fis.config.get( 'roadmap.path' ).unshift( {
-    reg : /^\/widget\/(.*\.js)$/i,
-    isMod : true,
-    release : '/static/${namespace}/widget/$1'
-}, {
-    reg : /^\/static\/(.*\.js)$/i,
-    isMod : true,
-    release : '/static/${namespace}/mod/$1'
-}, {
-    reg : /^\/page\/(.*\.js)$/i,
-    isMod : true,
-    release : '/static/${namespace}/page/$1'
-}, {
-    reg: '**.css',
-    useSprite: true
-} );
+fis.config.get( 'roadmap.path' ).unshift(
+    {
+        reg: /^\/widget\/(.*\.(js|css))$/i,
+        isMod: true,
+        useSprite: true,
+        release: '/static/${namespace}/widget/$1'
+    },
+    {
+        reg: /^\/static\/(.*\.(js|css))$/i,
+        isMod: true,
+        useSprite: true,
+        release: '/static/${namespace}/$1'
+    },
+    {
+        reg: /^\/page\/(.*\.(js|css))$/i,
+        isMod: true,
+        release: '/static/${namespace}/page/$1'
+    }
+);
