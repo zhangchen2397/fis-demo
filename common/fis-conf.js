@@ -14,9 +14,13 @@ fis.config.merge( {
     },
 
     deploy: {
-        test: {
-            receiver: "http://samczhang.kf0309.3g.qq.com/zhangchen/receiver.php",
-            to: "/home/zhangchen/www"
+        rd: {
+            receiver: "http://rd.fis.com/receiver.php",
+            to: "/home/work/www"
+        },
+        qa: {
+            receiver: "http://qa.fis.com/receiver.php",
+            to: "/home/word/www"
         }
     }
 } );
