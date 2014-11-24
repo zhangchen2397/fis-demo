@@ -11,7 +11,7 @@
             {%widget name="common:widget/header/header.tpl"%}
 
             <div class="main">
-                {%block name="main"%} {%/block%}
+                {%block name="main"%} aaa {%/block%}
             </div>
 
             {%widget name="common:widget/footer/footer.tpl"%}

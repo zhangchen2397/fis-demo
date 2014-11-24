@@ -3,6 +3,7 @@ var $ = require( 'common:static/lib/jquery/jquery.js' ),
     tip = require( 'travel:static/mod/tip/tip.js' );
 
 console.log( 'travel: page -> index' );
+console.log('test');
 
 $( '#call-commod-btn' ).on( 'click', function() {
     slide.init();

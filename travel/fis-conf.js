@@ -1,10 +1,6 @@
 fis.config.merge( {
     namespace: 'travel',
 
-    modules: {
-        spriter: 'csssprites'
-    },
-
     pack: {
         '/static/pkg/travel.css': [
             /^\/widget\/.*\.(css|less)/i,
@@ -17,17 +13,20 @@ fis.config.merge( {
         ]
     },
 
-    settings: {
-        smarty: {
-            left_delimiter: '{%',
-            right_delimiter: '%}',
-        },
+    modules: {
+        spriter: 'csssprites'
+    },
 
+    settings: {
         spriter: {
             csssprites: {
                 margin: 30
             }
         }
+    },
+
+    roadmap: {
+        domain: 'http://img1.qq.com:8080, http://img2.qq.com:8080'
     }
 } );
 
